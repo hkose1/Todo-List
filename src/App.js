@@ -14,14 +14,18 @@ function App() {
 
   function handleAddingItem(e) {
     e.preventDefault();
-    todoList.push(inputText)
-    setInputText("");
+    if(inputText.length > 0) {
+      todoList.push(inputText);
+      setTodoList(todoList);
+      localStorage.setItem("todos", JSON.stringify(todoList));
+      setInputText("");
+    }
   }
 
   return (
     <div className="App">
         <TodoForm handleInputChange={handleInputChange} handleAddingItem={handleAddingItem} inputText={inputText} />
-        <TodoList todoList={todoList} />
+        <TodoList />
     </div>
   );
 }
