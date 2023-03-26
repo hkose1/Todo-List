@@ -1,18 +1,23 @@
 import React from "react";
 
-function TodoForm( {handleInputChange, handleAddingItem, inputText} ) {
+function TodoForm( {handleInputChange, createNewItem, inputText} ) {
 
     return(
-        <form>
+        <form className="form">
 
             <input 
                 type="text"
                 placeholder="what will you do?"
                 onChange={handleInputChange}
                 value={inputText}
+                className="input"
             />
 
-            <button onClick={handleAddingItem}>+</button>
+            <button 
+                    className="create-btn" 
+                    onClick={createNewItem}>
+                <i class="fa-solid fa-square-plus fa-3x" title="Add new todo"></i>
+            </button>
 
         </form>
     )
