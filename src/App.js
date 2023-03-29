@@ -47,21 +47,6 @@ function App() {
     setTodoList(prevItems => prevItems.filter(item => item.id !== itemId));
   }
 
-  // function updateItem(input) {
-  //   setTodoList(prevItems => {
-  //     const newItems = [];
-  //     for(let i = 0; i < prevItems.length; i++) {
-  //       const oldItem = prevItems[i];
-  //       if(oldItem.id === currentItemId) {
-  //         newItems.push({...oldItem, value: input});
-  //       }else {
-  //         newItems.push(oldItem);
-  //       }
-  //     }
-  //     return newItems;
-  //   })
-  // }
-
   function updateItem(input) {
     setTodoList(prevItems => prevItems.map(
       (item) => item.id === currentItemId ? {...item, value: input} : item
