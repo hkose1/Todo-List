@@ -17,10 +17,9 @@ function App() {
   );
 
   function handleIsCompleted(itemId) {
-    setCurrentItemId(itemId);
     setTodoList(prevItems => 
       prevItems.map(item => 
-        item.id !== currentItemId ? item : {...item, checked: !item.checked}
+        item.id !== itemId ? item : {...item, checked: !item.checked}
       )
     )
   }
