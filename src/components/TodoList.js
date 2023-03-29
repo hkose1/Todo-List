@@ -6,6 +6,9 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
     const [updatedValue, setUpdatedValue] = useState('');
     
     function handleUpdateItem(itemId) {
+        if(currentItemId !== itemId) {
+            setisUpdateInputShown(false);
+        }
         setCurrentItemId(itemId);
         setisUpdateInputShown(prevVal => !prevVal);
     }
@@ -26,13 +29,15 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
             <div className="item">
                 <input 
                     type="checkbox"
-                    onClick={() => handleIsCompleted(item.id)}
+                    className="iscompleted-checkbox"
+                    onChange={() => handleIsCompleted(item.id)}
                     checked={item.checked}
                 />
 
                 <input 
                     type="text" 
                     value={item.value}
+                    readOnly
                     className={item.checked ? "item-input-completed" : "item-shown"}
                 />
                 

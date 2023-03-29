@@ -16,24 +16,13 @@ function App() {
     (todoList[0] && todoList[0].id) || ""
   );
 
-  const [isCompleted, setIsCompleted] = useState(false);
-
   function handleIsCompleted(itemId) {
-    setIsCompleted(prev => !prev);
     setCurrentItemId(itemId);
-     setTodoList(prevItems => {
-      const newItems = [];
-      for(let i = 0; i < prevItems.length; i++) {
-        const oldItem = prevItems[i];
-        if(oldItem.id === currentItemId) {
-          newItems.push({...oldItem, checked: isCompleted});
-        }else {
-          newItems.push(oldItem);
-        }
-      }
-      return newItems;
-    })
-     
+    setTodoList(prevItems => 
+      prevItems.map(item => 
+        item.id !== currentItemId ? item : {...item, checked: !item.checked}
+      )
+    )
   }
 
   function handleInputChange(e) {
