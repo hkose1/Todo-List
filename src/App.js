@@ -40,11 +40,13 @@ function App() {
       setCurrentItemId(newItem.id);
       setInputText("");
     }
-  } 
+  }
 
   function deleteItem(e, itemId) {
     e.stopPropagation();
-    setTodoList(prevItems => prevItems.filter(item => item.id !== itemId));
+    if (window.confirm("Are you sure You want to delete ?")) {
+      setTodoList(prevItems => prevItems.filter(item => item.id !== itemId));
+    }
   }
 
   function updateItem(input) {
