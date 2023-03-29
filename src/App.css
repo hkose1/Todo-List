@@ -26,6 +26,7 @@ body {
     padding-left: 10px;
     border: none;
     border-radius: 12px;
+    font-size: large;
 
 }
 
@@ -93,6 +94,7 @@ body {
     width: 25vw;
     height: 5vh;
     text-indent: 10px;
+    font-size: large;
     border: none;
     border-radius: 12px;
 }
