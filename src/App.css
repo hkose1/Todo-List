@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(51,175,163,1) 60%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, #020024 0%, #33afa3 60%, #00d4ff 100%);
 }
 
 .App {
@@ -32,7 +32,7 @@ body {
 .create-btn {
     border: none;
     cursor: pointer;
-    color: darkgreen;
+    color: #006400;
     background-color: #33afa3;
 }
 .delete-btn {
@@ -45,7 +45,7 @@ body {
 .update-btn {
     border: none;
     cursor: pointer;
-    color: rgb(33, 30, 30);
+    color: #211e1e;
     background-color: #33afa3;
 }
 .confirm-btn {
@@ -55,8 +55,8 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    color: white;
-    background-color: rgba(2,0,36,1);
+    color: #ffffff;
+    background-color: #020024;
 }
 
 .item-wrapper {
@@ -69,12 +69,12 @@ body {
     justify-content: space-between;
 }
 
-.item-input {
+.item-shown {
     width: 25vw;
     height: 5vh;
     border: none;
     border-radius: 12px;
-    padding-left: 10px;
+    text-indent: 10px;
     font-size: large;
 }
 
@@ -85,7 +85,7 @@ body {
     border-radius: 12px;
     padding-left: 10px;
     text-decoration:line-through;
-    color: green;
+    color: #008000;
 }
 
 .input-for-update {
@@ -100,5 +100,5 @@ body {
 .greeting-when-no-item {
     font-weight: bold;
     font-size: larger;
-    color: black;
+    color: #000000;
 }

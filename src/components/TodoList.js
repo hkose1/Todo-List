@@ -33,7 +33,7 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
                 <input 
                     type="text" 
                     value={item.value}
-                    className={item.checked ? "item-input-completed" : "item-input"}
+                    className={item.checked ? "item-input-completed" : "item-shown"}
                 />
                 
                 <button 
@@ -49,12 +49,12 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
             </div>
             { isUpdateInputShown && currentItemId === item.id &&
             <div>
-            <input 
-                type="text"
-                className="input-for-update"
-                onChange={(e) => handleUpdatedValue(e)}
-            />
-            <button onClick={confirmNewValue} className="confirm-btn">Confirm</button>
+                <input 
+                    type="text"
+                    className="input-for-update"
+                    onChange={(e) => handleUpdatedValue(e)}
+                />
+                <button onClick={confirmNewValue} className="confirm-btn">Confirm</button>
             </div>}
             
         </div>
