@@ -1,3 +1,104 @@
-/* .App {
-  
-} */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #020024 0%, #33afa3 60%, #00d4ff 100%);
+}
+
+.App {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.input {
+    width: 30vw;
+    height: 6vh;
+    margin: 0px 20px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 12px;
+
+}
+
+.create-btn {
+    border: none;
+    cursor: pointer;
+    color: #006400;
+    background-color: #33afa3;
+}
+.delete-btn {
+    border: none;
+    cursor: pointer;
+    color: #c91d12;
+    background-color: #33afa3;
+}
+
+.update-btn {
+    border: none;
+    cursor: pointer;
+    color: #211e1e;
+    background-color: #33afa3;
+}
+.confirm-btn {
+    margin: 0 5px;
+    padding:  8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #020024;
+}
+
+.item-wrapper {
+    margin: 10px 0px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-shown {
+    width: 25vw;
+    height: 5vh;
+    border: none;
+    border-radius: 12px;
+    text-indent: 10px;
+    font-size: large;
+}
+
+.item-input-completed {
+    width: 25vw;
+    height: 5vh;
+    border: none;
+    border-radius: 12px;
+    padding-left: 10px;
+    text-decoration:line-through;
+    color: #008000;
+}
+
+.input-for-update {
+    margin-top: 2%;
+    width: 25vw;
+    height: 5vh;
+    padding-left: 10px;
+    border: none;
+    border-radius: 12px;
+}
+
+.greeting-when-no-item {
+    font-weight: bold;
+    font-size: larger;
+    color: #000000;
+}
