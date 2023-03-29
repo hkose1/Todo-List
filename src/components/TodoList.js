@@ -34,7 +34,7 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
         <div key={index} className="item-wrapper" 
             style={
                 (filter === "completed" && !item.checked ? {display: "none"} :
-                (filter === "uncompleted") && item.checked ? {display: "none"} : {display: "inherit"})
+                (filter === "uncompleted") && item.checked ? {display: "none"} : {display: "block"})
             }>
             <div className="item">
                 <input 
@@ -99,7 +99,7 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
             <div>
                 {filtering}
                 {todoListItems.length === 0 ? 
-                <div className="greeting-when-no-item">There is nothing to do</div> : todoListItems}
+                <div className="greeting-when-no-item">THERE IS NOTHING TO DO</div> : todoListItems}
             </div>
         </section>
     )

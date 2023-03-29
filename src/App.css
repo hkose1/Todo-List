@@ -71,6 +71,10 @@ body {
     background-color: #020024;
 }
 
+.filtering {
+    margin-bottom: 20px;
+}
+
 .filtering > input {
     margin: 3px 15px;
 }
@@ -123,7 +127,7 @@ body {
 .greeting-when-no-item {
     font-weight: bold;
     font-size: larger;
-    color: #000000;
+    color: #ADEFD1FF;
 }
 
 .iscompleted-checkbox {
