@@ -53,7 +53,7 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
                 </button>
             </div>
             { isUpdateInputShown && currentItemId === item.id &&
-            <div>
+            <div className="item">
                 <input 
                     type="text"
                     className="input-for-update"
