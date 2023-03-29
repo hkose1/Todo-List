@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #020024 0%, #33afa3 60%, #00d4ff 100%);
+    background-color: #00203FFF;
 }
 
 .App {
@@ -27,27 +27,27 @@ body {
     border: none;
     border-radius: 12px;
     font-size: large;
-
 }
 
 .create-btn {
     border: none;
     cursor: pointer;
-    color: #006400;
-    background-color: #33afa3;
+    color: #ADEFD1FF;
+    background-color: transparent;
 }
 .delete-btn {
     border: none;
     cursor: pointer;
     color: #c91d12;
-    background-color: #33afa3;
+    background-color: transparent;
+
 }
 
 .update-btn {
     border: none;
     cursor: pointer;
-    color: #211e1e;
-    background-color: #33afa3;
+    background-color: transparent;
+    color: #ADEFD1FF;
 }
 .confirm-btn {
     margin-top: 2%;
@@ -56,8 +56,27 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+}
+
+.filter-btn {
+    margin-top: 2%;
+    padding:  8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
     color: #ffffff;
     background-color: #020024;
+}
+
+.filtering > input {
+    margin: 3px 15px;
+}
+.filtering > label {
+    color: #ADEFD1FF;
+    font-size: large;
 }
 
 .item-wrapper {
@@ -79,14 +98,16 @@ body {
     font-size: large;
 }
 
-.item-input-completed {
+.item-shown-completed {
     width: 25vw;
     height: 5vh;
     border: none;
     border-radius: 12px;
-    padding-left: 10px;
+    text-indent: 10px;
     text-decoration:line-through;
-    color: #008000;
+    font-size: large;
+    color: green;
+    background-color: #ebe1e1;
 }
 
 .input-for-update {

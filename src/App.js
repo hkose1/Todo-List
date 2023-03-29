@@ -64,7 +64,7 @@ function App() {
   return (
     <main className="App">
 
-      <h1>TODO LİST</h1>
+      <h1 style={{color: "#ADEFD1FF"}}>TODO LİST</h1>
       
       <TodoForm 
         handleInputChange={handleInputChange} 

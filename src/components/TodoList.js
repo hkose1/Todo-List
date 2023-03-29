@@ -4,6 +4,8 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
 
     const [isUpdateInputShown, setisUpdateInputShown] = useState(false);
     const [updatedValue, setUpdatedValue] = useState('');
+
+    const [filter, setFilter] = useState("all");
     
     function handleUpdateItem(itemId) {
         if(currentItemId !== itemId) {
@@ -24,8 +26,16 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
         setisUpdateInputShown(false);
     }
 
+    function handleFiltering(e) {
+        setFilter(e.target.value);
+    }
+
     const todoListItems = todoList.map((item,index) =>
-        <div key={index} className="item-wrapper">
+        <div key={index} className="item-wrapper" 
+            style={
+                (filter === "completed" && !item.checked ? {display: "none"} :
+                (filter === "uncompleted") && item.checked ? {display: "none"} : {display: "inherit"})
+            }>
             <div className="item">
                 <input 
                     type="checkbox"
@@ -38,7 +48,7 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
                     type="text" 
                     value={item.value}
                     readOnly
-                    className={item.checked ? "item-input-completed" : "item-shown"}
+                    className={item.checked ? "item-shown-completed" : "item-shown"}
                 />
                 
                 <button 
@@ -65,11 +75,29 @@ function TodoList( {todoList, deleteItem, updateItem, setCurrentItemId, currentI
         </div>
     );
 
-    
+    const filtering = (
+        <div className="filtering">
+            <label htmlFor="all">All</label>
+            <input type="radio" id="all" name="filter" value="all" 
+                checked={filter === "all"}
+                onChange={handleFiltering}/>
+
+            <label htmlFor="completed">Completed</label>
+            <input type="radio" id="completed" name="filter" value="completed"  
+                checked={filter === "completed"}
+                onChange={handleFiltering}/>
+
+            <label htmlFor="uncompleted">Uncompleted</label>
+            <input type="radio" id="uncompleted" name="filter" value="uncompleted"  
+                checked={filter === "uncompleted"}
+                onChange={handleFiltering}/>
+        </div>
+    )
 
     return(
         <section>
             <div>
+                {filtering}
                 {todoListItems.length === 0 ? 
                 <div className="greeting-when-no-item">There is nothing to do</div> : todoListItems}
             </div>
