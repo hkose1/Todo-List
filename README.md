@@ -13,5 +13,5 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### A screenshot of site
-![screenshot of site](https://github.com/hkose1/Todo-List/public/ssofsite.png)
+![screenshot of site](https://github.com/hkose1/Todo-List/blob/master/public/ssofsite.png)
 
