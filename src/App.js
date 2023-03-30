@@ -8,7 +8,7 @@ function App() {
 
   const [inputText, setInputText] = useState("");
   const [todoList, setTodoList] = useState(
-    // insteaf of getting directly using a function for lazy initializing
+    // insteaf of getting directly we can use a function for lazy initializing
     () => JSON.parse(localStorage.getItem("todoList")) || []
   );
 
